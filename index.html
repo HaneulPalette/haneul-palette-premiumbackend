@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Haneul Palette – Premium Analysis</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- jsPDF CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <img src="logo.png" class="logo">
+
+  <h1>Premium Korean Color Analysis</h1>
+  <p class="subtitle">Online AI-based analysis · ₹1499</p>
+
+  <!-- IMAGE UPLOAD -->
+  <input type="file" id="imageUpload" accept="image/*">
+  <button onclick="analyzeImage()">Analyze</button>
+
+  <!-- RESULTS -->
+  <div id="results" class="results hidden">
+    <h2>Your Analysis Preview</h2>
+
+    <p><strong>Undertone:</strong> <span id="undertone"></span></p>
+    <p><strong>Temperature:</strong> <span id="temperature"></span></p>
+    <p><strong>Depth:</strong> <span id="depth"></span></p>
+    <p><strong>Clarity:</strong> <span id="clarity"></span></p>
+    <p><strong>Premium Tone Label:</strong> <span id="toneLabel"></span></p>
+
+    <!-- PAYMENT LOCK -->
+    <div class="locked">
+      <h3>🔒 Unlock Full Premium Report – ₹1499</h3>
+
+      <img src="upi-qr.png" class="qr">
+
+      <p>Pay ₹1499 and submit screenshot</p>
+
+      <a href="https://forms.gle/XXHYG8UzwUMcvvcH8" target="_blank">
+        <button class="pay-btn">Submit Payment Proof</button>
+      </a>
+
+      <!-- PDF BUTTON (LOCKED) -->
+      <button id="downloadBtn" onclick="generatePDF()">
+        Download Premium PDF
+      </button>
+    </div>
+  </div>
+
+  <p class="disclaimer">
+    Disclaimer: Online analysis may vary due to lighting and camera quality.
+  </p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
